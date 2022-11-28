@@ -34,6 +34,7 @@ To get started developing right away:
 New window will open in your default browser automatically if not you can open this URL [http://localhost:3000/](http://localhost:3000/) in your browser.
 
 - here is home page view
+
 ![Homepage](src/images/ScreenShot/home-page.jpg "Home Page")
 
 
@@ -43,36 +44,45 @@ New window will open in your default browser automatically if not you can open t
 
 - Books are sorted into three categories: Currently Reading, Want to Read and Read
 - There is arrow button at each book you can open menu and change the book shelf from it, and the current shelf is highlighted to indicate the shelf.
+
 ![changeshelfmenu](src/images/ScreenShot/change-shelf-menu.jpg "Change shelf menu")
 
 - In case shelf is empty message will indicate that
+
 ![emptyShelf](src/images/ScreenShot/empty-shelf.jpg "Shelf id empty")
 
 
 - In case there is any problem to get data from server this message will appear
-- By clicking on book photo you can go to book details page 
+
 ![fail](src/images/ScreenShot/failed-fetch.jpg "Failed fetch data")
 
+- By clicking on book photo you can go to book details page 
 ### Search page
 - You can enter search page by click on green button at bottom of page
 - Then you redirect to search page.
 - Search page include field that you can type book name that you need to search.
 - Books will view automatically as here
+
 ![searchview](src/images/ScreenShot/search-view.jpg "search view")
 
 - If book is in your shelf it will have green check at top 
+
 ![bookshelfmark](src/images/ScreenShot/book-shelf-mark.jpg "book-shelf-mark")
 
 
 - Each book that appear in search page will have submenu if book is already in shelf this menu will appear with highlighted the book shelf.
+
 ![changeshelfmenu](src/images/ScreenShot/change-shelf-menu.jpg "Change shelf menu")
 
 - If book isn't in your shelf this menu will appear to put this book to shelf.
+
 ![addbooktoshelfmenu](src/images/ScreenShot/add-new-book-to-shelf-menu.jpg "Add new book to shelf menu")
 
 ### Book Details
 - By clicking on book photo you can go to book details page 
+
 ![bookdetails](src/images/ScreenShot/book-details.jpg "book details")
+
 - book image has green check bookmark at the top to indicate this book in your shelf.
 - If this book isn't in your shelf this bookmark will not appear.
 - you also can change bookshelf if it's already exit, or you can add it to your shelf if it's not exist in any shelf.

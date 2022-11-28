@@ -34,7 +34,7 @@ To get started developing right away:
 New window will open in your default browser automatically if not you can open this URL [http://localhost:3000/](http://localhost:3000/) in your browser.
 
 - here is home page view
-![Homepage](src/images/home-page.jpg "Home Page")
+![Homepage](src/images/ScreenShot/home-page.jpg "Home Page")
 
 
 ## Project functionality
@@ -51,7 +51,7 @@ New window will open in your default browser automatically if not you can open t
 
 - In case there is any problem to get data from server this message will appear
 - By clicking on book photo you can go to book details page 
-![fail](src/images/ScreenShot/failed-fetch.jpg"Failed fetch data")
+![fail](src/images/ScreenShot/failed-fetch.jpg "Failed fetch data")
 
 ### Search page
 - You can enter search page by click on green button at bottom of page

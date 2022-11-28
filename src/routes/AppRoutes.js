@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import BookDetails from "../components/BookDetails";
-import Home from "../components/Home";
-import Search from "../components/Search";
+import BookDetails from "../pages/BookDetails";
+import Home from "../pages/Home";
+import NotFound from "../pages/NotFound";
+import Search from "../pages/Search";
 
-const AppRoutes = ({books, addNewBookToShelf, updateBook }) => {
+const AppRoutes = ({books, addNewBookToShelf, updateBook, error }) => {
 
 
   return (
@@ -11,7 +12,7 @@ const AppRoutes = ({books, addNewBookToShelf, updateBook }) => {
       <Route
         path="/"
         exact
-        element={<Home books={books} updateBook={updateBook} />}
+        element={<Home books={books} updateBook={updateBook} error={error} />}
       />
       <Route
         path="/search"
@@ -21,8 +22,9 @@ const AppRoutes = ({books, addNewBookToShelf, updateBook }) => {
       <Route
         path="/book/:id"
         exact
-        element={<BookDetails books={books} updateBook={updateBook} />}
+        element={<BookDetails  addNewBookToShelf={addNewBookToShelf} updateBook={updateBook} />}
       />
+      <Route path='*' exact={true} element={<NotFound />} />
     </Routes>
   );
 };

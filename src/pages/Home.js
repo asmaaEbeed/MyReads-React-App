@@ -1,21 +1,25 @@
 import "../App.css";
 import { Link } from "react-router-dom";
-import BooksShelf from "./BooksShelf";
+import BooksShelf from "../components/BooksShelf";
 
-const Home = ({ books, updateBook }) => {
+const Home = ({ books, updateBook, error }) => {
   return (
-    <div className="app">
+    <div className="app" style={{
+      borderTop: '8px solid #2e7c31'}}>
+      
       <div className="list-books">
         <div className="list-books-title">
-          <h1>MyReads</h1>
+          <img
+            src={require("../images/book.svg").default}
+            alt="page not found"
+          />
+          <h1><Link className = "normal-link" to={'/'}><span>MY </span>READS</Link></h1>
         </div>
         <div className="list-books-content">
+        {error ? (<div className="error">Oops! <br/> Can't fetch book data :( </div>) : (
           <div>
-            {/* <CurrentlyReading books={books} updateBook={updateBook} />
-
-          <WantToRead books={books} updateBook={updateBook} />
-
-          <Read books={books} updateBook={updateBook}/> */}
+            {console.log((books.filter((book) => book.shelf === "wantToRead").length))}
+            
             <BooksShelf
               updateBook={updateBook}
               books={books.filter((book) => book.shelf === "wantToRead")}
@@ -32,11 +36,13 @@ const Home = ({ books, updateBook }) => {
               title="Read"
             />
           </div>
+        )}
         </div>
         <div className="open-search">
           <Link to="/search" />
         </div>
       </div>
+      
     </div>
   );
 };

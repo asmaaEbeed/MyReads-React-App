@@ -416,4 +416,7 @@ body,
 .books-grid li:hover {
   margin: 15px 7px;
 }
+.bookshelf {
+  margin: 0;
+}
 }

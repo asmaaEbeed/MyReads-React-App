@@ -372,7 +372,7 @@ body,
   color: #fff;
 }
 
-@media (min-width:320px) and (max-width:650px) {
+@media (max-width:650px) {
   .book {
     height: 142px;
     width: 100px
@@ -408,5 +408,12 @@ body,
   }
   .book-img-details .book {
     width: 95px;
+}
+.books-grid li {
+  
+  margin: 15px 7px;
+}
+.books-grid li:hover {
+  margin: 15px 7px;
 }
 }

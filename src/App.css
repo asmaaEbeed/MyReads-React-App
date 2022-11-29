@@ -188,6 +188,9 @@ body,
   color: #626262;
   line-height: 15px;
 }
+.book-details-description {
+  line-height: 1.3rem;
+}
 .book-top {
   position: relative;
   height: 200px;
@@ -244,6 +247,8 @@ body,
 .book-cover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background: #eee;
+  width: 140px;
+  height: 193px;
 }
 
 .book-cover-title {
@@ -365,4 +370,43 @@ body,
 .normal-link {
   text-decoration: none;
   color: #fff;
+}
+
+@media (min-width:320px) and (max-width:650px) {
+  .book {
+    height: 142px;
+    width: 100px
+  }
+  .book-top {
+    height: 142px;
+  }
+  .book-cover {
+    width: 95px;
+    height: 140px
+  }
+  .books-grid li {
+    width: 130px;
+  }
+  .list-books-title {
+    width: 55%;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  .list-books-title h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+  }
+  .list-books-title img {
+    width: 35px;
+    margin: 0 10px
+  }
+  .flex-wrap-media {
+    flex-flow: wrap-reverse;
+  }
+  .book-details-description {
+    line-height: 1rem;
+  }
+  .book-img-details .book {
+    width: 95px;
+}
 }

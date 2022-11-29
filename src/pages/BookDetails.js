@@ -28,7 +28,7 @@ const BookDetails = ({ updateBook, addNewBookToShelf }) => {
       </div>
 
       {bookDetails && Object.keys(bookDetails).length !== 0 && (
-        <div className="flex flex-center mt-3">
+        <div className="flex flex-center flex-wrap-media mt-3">
           <div className="book-details-container">
             <div>
               <h2
@@ -78,7 +78,7 @@ const BookDetails = ({ updateBook, addNewBookToShelf }) => {
                     Description
                   </div>
 
-                  <div style={{ textAlign: "justify" }}>
+                  <div className="book-details-description" style={{ textAlign: "justify" }}>
                     {bookDetails.description}
                   </div>
                 </div>
@@ -104,8 +104,6 @@ const BookDetails = ({ updateBook, addNewBookToShelf }) => {
                 <div
                   className="book-cover"
                   style={{
-                    width: "170px",
-                    height: "226px",
                     backgroundSize: "cover",
                     backgroundImage: `url(${
                       bookDetails.imageLinks

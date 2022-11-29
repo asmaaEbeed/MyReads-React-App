@@ -2,14 +2,14 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import * as BooksAPI from "../BooksAPI";
-import AddToShelf from "../components/AddToShelf";
-import ShelfChange from "../components/ShelfChange";
+import BooksShelf from "../components/BooksShelf";
 
 const Search = ({ books, addNewBookToShelf, updateBook }) => {
   const [isSearching, setIsSearching] = useState(false);
   const [query, setQuery] = useState("");
   const [error, setError] = useState(false);
   const [allBooks, setAllBooks] = useState([]);
+  const search = true;
 
   const debouncedSearchTerm = useDebounce(query, 500);
 
@@ -74,60 +74,8 @@ const Search = ({ books, addNewBookToShelf, updateBook }) => {
         </div>
       </div>
       <div className="search-books-results">
-        { error ? (<div className="error">Oops! <br/> Can't fetch book data :( </div>) :
-        <ol className="books-grid">
-          {isSearching && <div>Searching ...</div>}
-          {(allBooks.length === 0 && !isSearching && query) && (
-            <div>Sorry, No Result Found.</div>
-          )}
-          {allBooks.length > 0 &&
-            allBooks.map((book) => (
-              <li key={book.id}>
-                <div className="book">
-                  <div className="book-top">
-                    <div className="check-book">
-                      {(book.shelf === "read" ||
-                        book.shelf === "wantToRead" ||
-                        book.shelf === "currentlyReading") && (
-                        <div className="backcolor-icon">
-                          <img
-                            src={require("../images/check-mark.svg").default}
-                            alt="exit-book"
-                          />
-                        </div>
-                      )}
-                    </div>
-                    <Link to={`/book/${book.id}`}>
-                      <div
-                        className="book-cover"
-                        style={{
-                          width: "140px",
-                          height: "193px",
-                          backgroundSize: "cover",
-                          backgroundImage: `url(${book.imageLinks.thumbnail})`,
-                        }}
-                      ></div>
-                    </Link>
-
-                    {book.shelf === "" ? (
-                      <AddToShelf
-                        book={book}
-                        addNewBookToShelf={addNewBookToShelf}
-                      />
-                    ) : (
-                      <ShelfChange book={book} updateBook={updateBook} />
-                    )}
-                  </div>
-                </div>
-                <div className="book-details">
-                  <h3>Title: </h3>
-                  {book.title}
-                  
-                </div>
-              </li>
-            ))}
-        </ol>
-        }
+        <BooksShelf addNewBookToShelf={addNewBookToShelf} error={error} isSearching={isSearching} books={allBooks} updateBook={updateBook} search={search} />
+        
       </div>
     </div>
   );

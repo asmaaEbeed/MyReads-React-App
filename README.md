@@ -47,6 +47,8 @@ New window will open in your default browser automatically if not you can open t
 
 ![changeshelfmenu](src/images/ScreenShot/change-shelf-menu.jpg "Change shelf menu")
 
+- You can also drag book from shelf and drop it into other change.
+
 - In case shelf is empty message will indicate that
 
 ![emptyShelf](src/images/ScreenShot/empty-shelf.jpg "Shelf id empty")

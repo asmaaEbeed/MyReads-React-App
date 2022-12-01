@@ -15,21 +15,21 @@ const BooksShelf = ({
   bookShelfName,
 }) => {
 
-  var dragStartedSelector = document.querySelector('.drag-started');
+  // var dragStartedSelector = document.querySelector('.drag-started');
 
-  if(dragStartedSelector) {
-    dragStartedSelector.forEach((draggable) => {
-      draggable.addEventListener("touchstart", () => {
-        console.log("drag started")
-      });
+  // if(dragStartedSelector) {
+  //   dragStartedSelector.forEach((draggable) => {
+  //     draggable.addEventListener("touchstart", () => {
+  //       console.log("drag started")
+  //     });
 
       
-    });
+  //   });
 
-    dragStartedSelector.addEventListener('touchstart', function(){
-      console.log('btn touched');
-    })
-  }
+  //   dragStartedSelector.addEventListener('touchstart', function(){
+  //     console.log('btn touched');
+  //   })
+  // }
 
   
   let updatingBook = {}

@@ -11,7 +11,7 @@ const AddToShelf = ({book, addNewBookToShelf}) => {
 
   return (
     <div className="book-shelf-changer">
-      <select defaultValue={book.shelf} onChange={e => addBookToShelf(e)} >
+      <select defaultValue={book.shelf} className="bg-green-600" onChange={e => addBookToShelf(e)} >
         <option value="" disabled>
           Add to ..
         </option>

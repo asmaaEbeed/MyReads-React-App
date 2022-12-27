@@ -39,13 +39,15 @@ const Search = ({ books, addNewBookToShelf, updateBook }) => {
     () => {
       if (debouncedSearchTerm) {
         setIsSearching(true);
-        BooksAPI.search(debouncedSearchTerm, 40).then((results) => {
-          setIsSearching(false);
-          searchRelatedBooks(results);
-        }).catch(err => {
-          console.log(err);
-          setError(true);
-        });
+        BooksAPI.search(debouncedSearchTerm, 40)
+          .then((results) => {
+            setIsSearching(false);
+            searchRelatedBooks(results);
+          })
+          .catch((err) => {
+            console.log(err);
+            setError(true);
+          });
       } else {
         setAllBooks([]);
         setIsSearching(false);
@@ -59,23 +61,37 @@ const Search = ({ books, addNewBookToShelf, updateBook }) => {
   };
 
   return (
-    
-    <div className="search-books">
-      <div className="search-books-bar">
-        <Link className="close-search" to="/">
-          Close
-        </Link>
-        <div className="search-books-input-wrapper">
-          <input
-            type="text"
-            placeholder="Search by title, author, or ISBN"
-            onChange={(event) => updateQuery(event.target.value)}
-          />
+    <div className="search-books pt-10">
+      <div className="search-books-bar center-content bg-blue-dark">
+        <div className="w-full lg:w-6/12 px-4 m-auto">
+        <div className="relative flex flex-col min-w-0 break-words w-full md:mt-6 mt-4 mb-6 shadow-lg border-green-500 border-2 bg-black bg-opacity-25 p-1 lg:p-3">
+         <p className="leading-relaxed mt-1 text-blueGray-500 text-white">Enter keywords of book you need to add to your shelves.</p>
+         <div className="flex">
+
+          <Link className="close-search rounded border-green-600 border" to="/">
+            Close
+          </Link>
+          <div className="search-books-input-wrapper px-2">
+            <input
+              className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              type="text"
+              placeholder="Search by title, author, or ISBN"
+              onChange={(event) => updateQuery(event.target.value)}
+            />
+          </div>
+         </div>
+        </div>
         </div>
       </div>
       <div className="search-books-results">
-        <BooksShelf addNewBookToShelf={addNewBookToShelf} error={error} isSearching={isSearching} books={allBooks} updateBook={updateBook} search={search} />
-        
+        <BooksShelf
+          addNewBookToShelf={addNewBookToShelf}
+          error={error}
+          isSearching={isSearching}
+          books={allBooks}
+          updateBook={updateBook}
+          search={search}
+        />
       </div>
     </div>
   );

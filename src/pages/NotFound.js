@@ -27,7 +27,7 @@ const NotFound = () => {
         </div>
         <div className="img-container">
           <img
-            src={require("../images/not-found.jpg").default}
+            src={require("../images/not-found.jpg")}
             alt="page not found"
           />
         </div>

@@ -9,7 +9,7 @@ const ShelfChange = ({book, updateBook}) => {
   }
   return (
     <div className="book-shelf-changer">
-      <select defaultValue={book.shelf} onChange={e => updateBookShelf(e)} >
+      <select className="bg-green-600" defaultValue={book.shelf} onChange={e => updateBookShelf(e)} >
         <option value="" disabled>
           Move to...
         </option>

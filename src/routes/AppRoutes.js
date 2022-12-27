@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import Search from "../pages/Search";
 
-const AppRoutes = ({books, addNewBookToShelf, updateBook, error }) => {
+const AppRoutes = ({books, addNewBookToShelf, updateBook, error, loading }) => {
 
 
   return (
@@ -12,7 +12,7 @@ const AppRoutes = ({books, addNewBookToShelf, updateBook, error }) => {
       <Route
         path="/"
         exact
-        element={<Home books={books} updateBook={updateBook} error={error} />}
+        element={<Home books={books} updateBook={updateBook} error={error} loading={loading} />}
       />
       <Route
         path="/search"

@@ -1,28 +1,17 @@
 import "../App.css";
-import { Link } from "react-router-dom";
 import BooksShelf from "../components/BooksShelf";
+import HomeBanner from "../components/HomeBanner";
+import ContactUs from "../components/ContactUs";
+import KeepInTouch from "../components/KeepInTouch";
 
-const Home = ({ books, updateBook, error }) => {
+const Home = ({ books, updateBook, error, loading}) => {
   return (
     <div
       className="app"
-      style={{
-        borderTop: "8px solid #2e7c31",
-      }}
     >
+      <HomeBanner />
       <div className="list-books">
-        <div className="list-books-title">
-          <img
-            src={require("../images/book.svg").default}
-            alt="page not found"
-          />
-          <h1>
-            <Link className="normal-link" to={"/"}>
-              <span>MY </span>READS
-            </Link>
-          </h1>
-        </div>
-        <div className="list-books-content">
+        <div className="list-books-content pb-4">
           {error ? (
             <div className="error">
               Oops! <br /> Can't fetch book data :({" "}
@@ -39,6 +28,8 @@ const Home = ({ books, updateBook, error }) => {
                 books={books.filter((book) => book.shelf === "wantToRead")}
                 title="Want to Read"
                 bookShelfName="wantToRead"
+                id="wantToRead"
+                loading={loading}
               />
               <BooksShelf
                 allBooks={books}
@@ -48,21 +39,23 @@ const Home = ({ books, updateBook, error }) => {
                 )}
                 title="currently Reading"
                 bookShelfName="currentlyReading"
+                loading={loading}
               />
               <BooksShelf
                 allBooks={books}
                 updateBook={updateBook}
                 books={books.filter((book) => book.shelf === "read")}
                 title="Read"
-                bookShelfName="read"
+                bookShelfName="read" id="read"
+                loading={loading}
               />
             </div>
           )}
         </div>
-        <div className="open-search">
-          <Link to="/search" />
-        </div>
+        
       </div>
+      <ContactUs />
+      <KeepInTouch />
     </div>
   );
 };

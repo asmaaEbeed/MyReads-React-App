@@ -1,11 +1,12 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HomeBanner = () => {
   const ref = useRef(null);
 
   const [starContainerWidth, setStarContainerWidth] = useState(0);
   const [starContainerHight, setStarContainerHight] = useState(0);
-  
+
   useLayoutEffect(() => {
     const count = 50;
     const section = document.querySelector(".star-container");
@@ -86,12 +87,12 @@ const HomeBanner = () => {
                 <br /> by adding books to shleves
                 <br /> easily
               </p>
-              <button
+              <Link
                 className="bg-green-600 hover:bg-green-800 text-white active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150 relative"
-                type="button"
+                type="button" to="/search"
               >
-                Learn More
-              </button>
+                Search More
+              </Link>
             </div>
             <div className="w-full relative flex justify-between md:w-1/2 lg:static lg:block lg:justify-start mb-4 lg:py-8 py-0 flex-row-reverse min-h-screen-20">
               <div className="relative" style={{ direction: "rtl" }}>

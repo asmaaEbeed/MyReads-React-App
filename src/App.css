@@ -242,8 +242,8 @@ body,
 .book-cover {
   box-shadow: 0 1px 0px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
   background: #eee;
-  width: 140px;
-  height: 193px;
+  width: 79px;
+  height: 139px;
 }
 
 .book-img-details .book-cover {
@@ -403,7 +403,8 @@ body,
   }
 
   .books-grid li {
-    width: 130px;
+    width: 109px;
+    margin: 15px 5px;
   }
 
   .list-books-title {
@@ -439,10 +440,7 @@ body,
   /* .book-img-details .book {
     width: 95px;
 } */
-  .books-grid li {
-
-    margin: 15px 7px;
-  }
+ 
 
   .books-grid li:hover {
     margin: 15px 7px;

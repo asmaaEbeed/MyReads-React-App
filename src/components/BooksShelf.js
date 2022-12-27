@@ -91,7 +91,7 @@ const BooksShelf = ({
               (books.length !== 0 ? (
                 books.map((book) => (
                   <li
-                    className={`drag-started border-2  py-2 md:px-5 px-2 ${bookShelfName === "currentlyReading" ? "border-green-500 bg-black bg-opacity-25" : "border-blue-dark"}`}
+                    className={`drag-started border-2  py-2 md:px-5 px-1 ${bookShelfName === "currentlyReading" ? "border-green-500 bg-black bg-opacity-25" : "border-blue-dark"}`}
                     style={{ cursor: dragCursor }}
                     title={dragTitle}
                     key={book.id}

@@ -378,6 +378,12 @@ body,
     height: 142px;
     width: 100px
   }
+  .center-content {
+    margin-right: 0;
+    margin-left: 0;
+    text-align: center;
+  }
+  
 
   .book-top {
     height: 142px;

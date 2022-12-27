@@ -3,16 +3,8 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div style={{
-      borderTop: '8px solid #2e7c31'}}>
-      <div className="list-books-title">
-        <img src={require("../images/book.svg").default} alt="page not found" />
-        <h1>
-          <Link className="normal-link" to={"/"}>
-            <span>MY </span>READS
-          </Link>
-        </h1>
-      </div>
+    <div className="pt-10">
+      
       <div className="flex flex-center align-item-center flex-wrap mt-3">
         <div style={{marginBottom: '20px'}}>
           <span className="error-404">

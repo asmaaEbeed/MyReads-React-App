@@ -60,7 +60,7 @@ export default function Navbar() {
                 className="flex items-center ease-in duration-300 border-b border-blue-dark hover:border-gray-400"
               >
                 <HashLink
-                  className="lg:text-white lg:bg-blue-dark lg:rounded-t-md lg:hover:text-blueGray-200 lg:mr-1 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" to="#wantToRead" smooth
+                  className="lg:text-white lg:bg-blue-dark lg:rounded-t-md lg:hover:text-blueGray-200 lg:mr-1 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" to="/#wantToRead" smooth
                 >
                   Want to Read
                 </HashLink>
@@ -69,7 +69,7 @@ export default function Navbar() {
                 className="flex items-center ease-in duration-300 border-b border-blue-dark hover:border-gray-400"
               >
                 <HashLink
-                  className="lg:text-white lg:bg-blue-dark lg:rounded-t-md lg:hover:text-blueGray-200 lg:mr-1 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" to="#currentlyReading" smooth
+                  className="lg:text-white lg:bg-blue-dark lg:rounded-t-md lg:hover:text-blueGray-200 lg:mr-1 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" to="/#currentlyReading" smooth
                 >
                   Currently Read
                 </HashLink>
@@ -79,7 +79,7 @@ export default function Navbar() {
                 className="flex items-center ease-in duration-300 border-b border-blue-dark hover:border-gray-400"
               >
                 <HashLink
-                  className="lg:text-white lg:bg-blue-dark lg:rounded-t-md lg:hover:text-blueGray-200 lg:mr-1 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" to="#read" smooth
+                  className="lg:text-white lg:bg-blue-dark lg:rounded-t-md lg:hover:text-blueGray-200 lg:mr-1 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold" to="/#read" smooth
                 
                 >
                   Read

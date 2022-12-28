@@ -3,25 +3,23 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="pt-10">
-      
-      <div className="flex flex-center align-item-center flex-wrap mt-3">
-        <div style={{marginBottom: '20px'}}>
-          <span className="error-404">
-            4<span className="error-404 error-0">0</span>4
-          </span>
-          <span className="error-text">error</span>
-          <h3>Your Page Not Found</h3>
-
-          <Link to={"/"} className="home-btn">
-            Back to home
-          </Link>
-        </div>
+    <div className="pt-10 mx-auto">
+      <div className="center-content bg-blue-dark min-h-[calc(100vh-58px)] pb-7">
         <div className="img-container">
           <img
             src={require("../images/not-found.png")}
             alt="page not found"
+            className="block mx-auto"
           />
+        </div>
+        <div style={{ marginBottom: "20px" }}>
+          <Link
+            className="bg-green-600 hover:bg-green-800 text-white active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150 relative"
+            type="button"
+            to={"/"}
+          >
+            Back to home
+          </Link>
         </div>
       </div>
     </div>

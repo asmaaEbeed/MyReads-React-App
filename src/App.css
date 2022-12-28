@@ -340,24 +340,7 @@ body,
 }
 
 .img-container img {
-  width: 280px;
-}
-
-.error-404 {
-  font-size: 6rem;
-  text-align: center;
-  font-weight: 600;
-}
-
-.error-0 {
-  color: #2e7c31;
-}
-
-.error-text {
-  font-size: 33px;
-  padding: 0 20px;
-  text-align: center;
-  font-weight: 700;
+  width: 30%;
 }
 
 .home-btn {
@@ -441,6 +424,9 @@ body,
     width: 30px;
     height: 30px;
     right: 10px
+  }
+  .img-container img {
+    width: 60%;
   }
 
   /* .book-img-details .book {

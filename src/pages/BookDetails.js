@@ -14,10 +14,7 @@ const BookDetails = ({ updateBook, addNewBookToShelf }) => {
       const fetchedBook = await BooksAPI.get(id);
       if (fetchedBook === null) {
         navigate("/not-found");
-
-        console.log("err");
       } else {
-        console.log("get book success");
         setBookDetails(fetchedBook);
       }
     };

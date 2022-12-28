@@ -13,8 +13,6 @@ export const get = async (bookId) =>{
   const res = await fetch(`${api}/books/${bookId}`, { headers })
   if(res.ok) {
     const resJson = await res.json();
-    console.log('resJson');
-    console.log(resJson);
     return resJson.book
   } else {
     return null

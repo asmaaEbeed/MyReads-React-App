@@ -18,8 +18,6 @@ const HomeBanner = () => {
       }
     }
 
-    console.log(stars);
-
     function createStars() {
       removeOldStars();
     let i = 0;

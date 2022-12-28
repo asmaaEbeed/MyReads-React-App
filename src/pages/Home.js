@@ -18,10 +18,6 @@ const Home = ({ books, updateBook, error, loading}) => {
             </div>
           ) : (
             <div>
-              {console.log(
-                books.filter((book) => book.shelf === "wantToRead").length
-              )}
-
               <BooksShelf
                 allBooks={books}
                 updateBook={updateBook}

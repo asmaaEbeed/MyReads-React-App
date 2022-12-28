@@ -22,14 +22,12 @@ function App() {
         res.error && setError(true);
       })
       .catch((err) => {
-        console.log(err);
         setError(true);
       });
   };
 
   const addNewBookToShelf = (newBook) => {
     const isExist = checkBookExisting(newBook);
-    console.log("isExist:", isExist);
     isExist &&
       books.map(
         (book) =>
@@ -45,7 +43,6 @@ function App() {
           res.error && setError(true);
         })
         .catch((err) => {
-          console.log(err);
           setError(true);
         });
     }
@@ -68,7 +65,6 @@ function App() {
         setBooks(books);
       })
       .catch((err) => {
-        console.log(err);
         setError(true);
       });
   }, []);

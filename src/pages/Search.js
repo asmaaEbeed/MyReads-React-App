@@ -45,7 +45,6 @@ const Search = ({ books, addNewBookToShelf, updateBook }) => {
             searchRelatedBooks(results);
           })
           .catch((err) => {
-            console.log(err);
             setError(true);
           });
       } else {
